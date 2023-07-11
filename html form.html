@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Account User</title>
+    <link rel="stylesheet" href="style2.css">
+    <!---we had linked our css file----->
+</head>
+<body>
+    <div class="full-page">
+        <div class="navbar">
+            <div>
+                <a href='index.html'>CarDealer</a>
+            </div>
+            <nav>
+                <ul id='MenuItems'>
+                    <li><a href='index.html'>Home</a></li>
+                    <li><button class='loginbtn' onclick="document.getElementById('login-form').style.display='block'" style="width:auto;">Login</button></li>
+                </ul>
+            </nav>
+        </div>
+        <div id='login-form'class='login-page'>
+            <div class="form-box">
+                <div class='button-box'>
+                    <div id='btn'></div>
+                    <button type='button'onclick='login()'class='toggle-btn'>Log In</button>
+                    <button type='button'onclick='register()'class='toggle-btn'>SignUp</button>
+                </div>
+                <form id='login' class='input-group-login'>
+                    <input type='text'class='input-field'placeholder='Email Id'required>
+		            <input type='password'class='input-field'placeholder='Enter Password'required>
+		            <input type='checkbox'class='check-box'>Remember Password</i>
+		            <button type='submit'class="submit-btn">Log in</button> 
+		        </form>
+		        <form id='register' class='input-group-register'>
+		            <input type='text'class='input-field'placeholder='First Name' required>
+		            <input type='text'class='input-field'placeholder='Last Name ' required>
+		            <input type='email'class='input-field'placeholder='Email Id' required>
+		            <input type='password'class='input-field'placeholder='Enter Password' required>
+		            <input type='password'class='input-field'placeholder='Confirm Password'  required>
+		            <input type='checkbox'class='check-box'>I agree to the terms and conditions</i>
+                    <button type='submit'class="submit-btn">Register</button>
+	         </form>
+            </div>
+        </div>         
+    </div>
+    <!--the first script code is for login and registeration form to move correctly-->
+    <script>
+         var x=document.getElementById('login');
+         var y=document.getElementById('register');
+         var z=document.getElementById('btn');
+         function register()
+        {
+           x.style.left='-400px';
+           y.style.left='50px';
+           z.style.left='110px';
+        }
+        function login()
+    {
+        x.style.left='50px';
+        y.style.left='450px';
+        z.style.left='0px';
+    }
+    </script>
+    <!--this code is for the when you click out the login or registration page-->
+    <script>
+      var modal = document.getElementById('login-form');{
+         let x = "HelloWorld@gmail.com";
+         let y = "12345"
+         let z = "HelloWorld"
+         if(form.email.value == x && form.pwd.value == y && form.username.value == z){
+            alert("You Have Successfully Register!")
+            window.open('index.html', '_self')
+         }
+         else{
+            alert("Error! Please Enter A Correct Info")
+            return;
+         }
+        }
+    </script>
+</body>
+</html>
